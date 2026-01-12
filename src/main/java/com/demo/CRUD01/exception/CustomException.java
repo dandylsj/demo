@@ -1,0 +1,14 @@
+package com.demo.CRUD01.exception;
+
+import lombok.Getter;
+
+@Getter
+public class CustomException extends RuntimeException {
+
+    private final ErrorMessage errorMessage;
+
+    public CustomException(ErrorMessage errorMessage) {
+        super(errorMessage.getMessage());
+        this.errorMessage = errorMessage;
+    }
+}
