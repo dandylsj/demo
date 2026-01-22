@@ -125,4 +125,5 @@ public class MemberService {
 
         foundMember.softDeleted();
     }
+    //추가
 }
