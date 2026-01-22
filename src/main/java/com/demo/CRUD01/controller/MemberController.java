@@ -47,7 +47,7 @@ public class MemberController {
      */
     @GetMapping
     public ResponseEntity<ApiResponse<MemberGetOneResponse>> memberGetInquiryApi(
-            @RequestHeader("Authorization") String authorization
+            @RequestHeader("authorization") String authorization
     ) {
         MemberGetOneResponse memberInfo = memberService.memberGetInquiry(authorization);
 
@@ -72,7 +72,7 @@ public class MemberController {
      */
     @PatchMapping
     public ResponseEntity<ApiResponse<MemberUpdateResponseDto>> memberUpdateApi(
-            @RequestHeader("Authorization") String authorization,
+            @RequestHeader("authorization") String authorization,
             @RequestBody MemberUpdateRequestDto memberUpdateRequestDto) {
 
         MemberAuthInfo memberAuthInfo = jwtService.vaildateToken(authorization);
@@ -89,7 +89,7 @@ public class MemberController {
      */
     @DeleteMapping
     public ResponseEntity<ApiResponse<Void>> deleteMemberApi(
-            @RequestHeader("Authorization") String authorization) {
+            @RequestHeader("authorization") String authorization) {
 
         memberService.memberDelete(authorization);
 
